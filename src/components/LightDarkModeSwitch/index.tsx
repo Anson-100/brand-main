@@ -9,7 +9,7 @@ const LightDarkModeSwitch: React.FC = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="group flex items-center justify-center p-1.5 rounded-full  bg-zinc-700 dark:bg-stone-500 transition-all duration-500"
+      className="group flex items-center justify-center p-1.5 rounded-full  bg-zinc-600 dark:bg-stone-500"
       aria-label="Toggle Dark Mode"
     >
       {!isDarkMode ? (

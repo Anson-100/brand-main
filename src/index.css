@@ -15,6 +15,21 @@ body,
   font-family: "DM Sans", sans-serif;
   @apply text-text-header;
 }
+/* LOGO STYLING============================================================ */
+.logo:hover {
+  box-shadow:
+    0 0 2px #ededed,
+    0 0 5px #bfdbfe,
+    0 0 10px #6366f1,
+    0 0 15px #7c3aed;
+}
+
+.dark .logo:hover {
+  box-shadow:
+    0 0 5px #172554,
+    0 0 5px #2e1065,
+    0 0 10px #172554;
+}
 
 /* PROJECTS TAB STYLING ==================================================================*/
 .tab {

@@ -117,7 +117,7 @@ const Projects: React.FC<ProjectsProps> = ({
               </div>
               {/* PROJECTS */}
               <div className="w-full lg:w-2/3 h-full flex-grow overflow-hidden landscape-mobile:pr-6 pr-none sm:pr-8">
-                <div className="grid grid-cols-2 gap-2 md:gap-4  h-full max-h-full">
+                <div className="grid grid-cols-2 gap-2 md:gap-4 h-full max-h-full">
                   <ProjectItem
                     imgSrc={ServomancerDesktop}
                     altText="Project One"
