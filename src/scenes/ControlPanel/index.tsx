@@ -56,9 +56,13 @@ const ControlPanel: React.FC = () => {
     "group bg-button-bg dark:bg-dark-button-bg rounded-lg border border-button-border dark:border-dark-button-border tab flex items-center justify-center w-40 p-3 bt-bp:py-4 hover:bg-button-bg-hover dark:hover:bg-dark-button-bg-hover text-text-gray dark:text-dark-text-gray hover:text-text-header dark:hover:text-dark-text-header dark:hover:border-dark-button-border-hover landscape-mobile:py-3";
   const buttonIconStyling =
     "h-6 text-text-gray dark:text-dark-text-gray group-hover:text-text-content dark:group-hover:text-dark-text-content";
+  // ------------------------------------------------------------------------------------------------------
+  // ------------------------------------------------------------------------------------------------------
+  // ------------------------------------------------------------------------------------------------------
 
   return (
     <div className="relative h-screen w-full bg-screen-bg dark:bg-dark-screen-bg gap-8 xs:gap-4 landscape-mobile:gap-0 flex flex-col items-center justify-center landscape-mobile:pt-4">
+      {/* LOGO SECTION----------------------------------- */}
       <div className="flex flex-col items-center">
         <img
           src={isDarkMode ? LogoDark : Logo}
@@ -66,7 +70,7 @@ const ControlPanel: React.FC = () => {
           className="w-60 landscape-mobile:w-40 opacity-[90] se:w-32"
         />
 
-        <div className="flex gap-2 se:text-md xs:text-lg text-text-header dark:text-dark-text-header mt-2 items-center">
+        <div className="flex gap-2 se:text-md xs:text-lg text-text-header dark:text-dark-text-header mt-4 items-center">
           <p className="font-bold">Anson Hunnell{""}</p>
 
           <p className="text-indigo-700 ">/</p>
@@ -76,6 +80,7 @@ const ControlPanel: React.FC = () => {
         </div>
       </div>
 
+      {/* BUTTON SECTION----------------------------------- */}
       <div className="flex flex-col bt-bp:flex-row gap-6 mt-8">
         {/* PROJECT BUTTON------------- */}
         <div
@@ -122,6 +127,7 @@ const ControlPanel: React.FC = () => {
           </div>
         </div>
       </div>
+      {/* POP UP SECTION STRUCTURE----------------------------------------------------- */}
       <div ref={panelRef}>
         <Projects
           isOpen={openTab === "projects"}

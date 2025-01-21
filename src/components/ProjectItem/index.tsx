@@ -6,6 +6,7 @@ interface ProjectItemProps {
   title: string;
   description: string;
   link: string;
+  techStack: string; // New prop for technologies used
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({
@@ -14,24 +15,28 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   title,
   description,
   link,
+  techStack,
 }) => {
-  const handleClick = () => {
-    window.open(link, "_blank", "noopener,noreferrer");
-  };
-
   return (
-    <div
-      className="logo group aspect-w-1 aspect-h-1 relative cursor-pointer group transition-all duration-100 bg-gray-200 hover:bg-gray-100 bg-opacity-30 hover:bg-opacity-100 landscape-mobile:rounded-sm  rounded"
-      onClick={handleClick}
-    >
+    <div className="project-tile landscape-mobile:rounded-sm rounded p-4">
       <img
         src={imgSrc}
         alt={altText}
-        className="object-cover w-full h-full  landscape-mobile:rounded-sm rounded "
+        className="object-cover w-full  landscape-mobile:rounded-sm rounded"
       />
-      <div className=" absolute bottom-0 left-0 right-0 landscape-mobile:h-full bg-indigo-950 dark:bg-indigo-900 dark:bg-opacity-75 bg-opacity-75 backdrop-blur-sm py-2   landscape-mobile:py-1 px-4 landscape-mobile:px-2 group-hover:bg-indigo-700 transition-all duration-100  landscape-mobile:rounded-sm rounded-b">
-        <p className="text-xs sm:text-sm font-bold text-gray-100">{title}</p>
-        <p className="text-xs text-gray-300">{description}</p>
+      <div className="flex flex-col pt-2 gap-1">
+        <p className="text-base sm:text-lg font-bold text-gray-100">{title}</p>
+        <p className="text-sm text-gray-300">{description}</p>
+        <p className="text-sm text-gray-400 mt-1">{techStack}</p>{" "}
+        {/* Tech Stack */}
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 px-3 py-2 text-base font-semibold text-gray-200 bg-indigo-600 rounded hover:bg-indigo-500 transition text-center"
+        >
+          Visit Site <span className="text-lg">↗</span>
+        </a>
       </div>
     </div>
   );

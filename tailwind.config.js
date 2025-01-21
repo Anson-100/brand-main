@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: "class",
   mode: "jit",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -76,6 +76,7 @@ module.exports = {
       sm: "768px",
       md: "1060px",
       lg: "1200px",
+      xl: "1400px",
 
       se: { raw: "(max-width: 376px) and (max-height: 700px)" },
 

@@ -30,6 +30,15 @@ body,
     0 0 5px #2e1065,
     0 0 10px #172554;
 }
+/* PROJECTS SCROLLABLE STYLING ========================================================================== */
+.projects-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-scrollable {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 /* PROJECTS TAB STYLING ==================================================================*/
 .tab {
@@ -46,6 +55,22 @@ body,
     0 0 10px #6366f1,
     0 0 15px #7c3aed;
 }
+
+/* PROJECT ITEM STYLING ============================================================================ */
+.project-tile {
+  background: #a8a29e16;
+  backdrop-filter: blur(8px);
+  border: 1px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+/* .project-tile:hover {
+  background: #a8a29e26;
+  cursor: pointer;
+} */
 
 /* ACTION BUTTON STYLING ==================================================================*/
 .action {

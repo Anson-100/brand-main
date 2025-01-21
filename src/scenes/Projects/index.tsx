@@ -1,7 +1,9 @@
+// import { useEffect, useRef } from "react";
 import ServomancerDesktop from "@/assets/servomancer-desktop.png";
 import TierDesktop from "@/assets/tier-desktop.png";
 import FitnessDesktop from "@/assets/fitness-desktop.png";
 import CarpentryDesktop from "@/assets/carpentry-desktop.png";
+import AIHubDesktop from "@/assets/ai-hub-desktop.png";
 
 import { SquaresPlusIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -19,7 +21,7 @@ const Projects: React.FC<ProjectsProps> = ({
   toggleMenu,
 }) => {
   // Simplified menuClasses for correct open and closed positions
-  const menuClasses = `fixed top-0 left-0 h-5/6 landscape-mobile:h-4/5 mt-20 landscape-mobile:mt-16 mt-20 w-[calc(100%-.5rem)] xs:w-[calc(100%-1rem)] transition-transform duration-500 ${
+  const menuClasses = `fixed top-0 left-0 h-[90%] landscape-mobile:h-4/5 mt-20 landscape-mobile:mt-16 mt-20 w-[calc(100%-.5rem)] xs:w-[calc(100%-1rem)] transition-transform duration-500 ${
     isOpen ? "translate-x-0 z-20" : "-translate-x-[calc(100%)] z-10" // Assuming 1rem = 4 units, adjust accordingly if your setup differs
   } bg-opacity-50 flex flex-row`;
 
@@ -41,7 +43,7 @@ const Projects: React.FC<ProjectsProps> = ({
           />{" "}
           {isAboveMd ? (
             <div
-              className={`relative h-full w-full flex gap-8 transition-opacity ${isOpen ? "opacity-100" : "opacity-0"}`}
+              className={`relative h-full w-full flex justify-between gap-8 transition-opacity ${isOpen ? "opacity-100" : "opacity-0"}`}
               style={{
                 transitionDuration: isOpen ? "1000ms" : "200ms",
               }}
@@ -57,40 +59,46 @@ const Projects: React.FC<ProjectsProps> = ({
                 </p>
               </div>
               {/* PROJECTS---------------------------------- */}
-              <div className="z-10 h-full w-2/3 ">
-                <div className="grid grid-cols-2 grid-rows-2 gap-2 md:gap-4 p-4 md:p-8 h-full w-full lg:w-3/4 ml-auto">
+              <div className="projects-scrollable w-2/3 z-10 h-full overflow-y-auto p-4 md:p-4 mr-8">
+                <div className="flex flex-col h-full mx-auto gap-8">
                   <ProjectItem
                     imgSrc={ServomancerDesktop}
                     altText="Project One"
-                    title={isAboveSm ? "Servomancer" : "Servomancer"}
-                    description={
-                      isAboveSm
-                        ? "Web Application/AI Browser Extension"
-                        : "AI Extension"
-                    }
+                    title="Servomancer"
+                    description="Web Application/AI Browser Extension"
+                    techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
                     link="https://servomancertennis.com/"
                   />
                   <ProjectItem
-                    imgSrc={CarpentryDesktop}
+                    imgSrc={AIHubDesktop}
                     altText="Project Two"
-                    title={isAboveSm ? "Cotter Carpentry" : "CC Site"}
-                    description={isAboveSm ? "Web Application" : "Web App"}
+                    title="AI Hub"
+                    description="Web Application/AI Browser Extension"
+                    techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
+                    link="https://d1g3hir3bpucsm.cloudfront.net/"
+                  />
+                  <ProjectItem
+                    imgSrc={CarpentryDesktop}
+                    altText="Project Three"
+                    title="Cotter Carpentry"
+                    description="Web Application"
+                    techStack="React, JavaScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
                     link="https://dffj7242m7ucr.cloudfront.net"
                   />
                   <ProjectItem
                     imgSrc={FitnessDesktop}
-                    altText="Project Three"
-                    title={
-                      isAboveSm ? "Ohio Fitness & Martial Arts" : "OF&MA Site"
-                    }
-                    description={isAboveSm ? "Web Application" : "Web App"}
+                    altText="Project Four"
+                    title="Ohio Fitness & Martial Arts"
+                    description="Web Application"
+                    techStack="React, TypeScript, Tailwind CSS, AWS(S3, Cloudfront, Route 53)"
                     link="https://d2knfuznay8em1.cloudfront.net"
                   />
                   <ProjectItem
                     imgSrc={TierDesktop}
-                    altText="Project Four"
-                    title={isAboveSm ? "Tier List Quiz" : "Tier Quiz"}
-                    description={isAboveSm ? "Web Application" : "Web App"}
+                    altText="Project Five"
+                    title="Jiu-Jitsu Tier List Quiz"
+                    description="Web Application"
+                    techStack="Vanilla HTML, Vanilla JavaScript, Vanilla CSS"
                     link="https://dwxi6v27vyx5l.cloudfront.net"
                   />
                 </div>
@@ -105,7 +113,7 @@ const Projects: React.FC<ProjectsProps> = ({
                 transitionDuration: isOpen ? "1000ms" : "200ms",
               }}
             >
-              {/* HEADER */}
+              {/* HEADER MOBILE ----------------------------------------------*/}
               <div className="w-full lg:w-1/3 mx-auto my-auto z-10 flex-shrink-0 pt-8 landscape-mobile:pt-0 md:pt-0">
                 <h2 className="text-2xl font-bold mb-4 landscape-mobile:mb-0 text-text-header dark:text-dark-text-header">
                   Projects
@@ -115,43 +123,39 @@ const Projects: React.FC<ProjectsProps> = ({
                   dedication to quality, creativity, and practicality.
                 </p>
               </div>
-              {/* PROJECTS */}
-              <div className="w-full lg:w-2/3 h-full flex-grow overflow-hidden landscape-mobile:pr-6 pr-none sm:pr-8">
-                <div className="grid grid-cols-2 gap-2 md:gap-4 h-full max-h-full">
+              {/* PROJECTS MOBILE ---------------------- */}
+              <div className="projects-scrollable z-10 h-full overflow-y-auto md:p-4 ">
+                <div className="flex flex-col h-full  mx-auto gap-y-12">
                   <ProjectItem
                     imgSrc={ServomancerDesktop}
                     altText="Project One"
-                    title={isAboveSm ? "Servomancer" : "Servomancer"}
-                    description={
-                      isAboveSm
-                        ? "Web Application/AI Browser Extension"
-                        : "AI Extension"
-                    }
+                    title="Servomancer"
+                    description="Web Application/AI Browser Extension"
+                    techStack="React, TypeScript, Tailwind CSS, OpenAI API"
                     link="https://servomancertennis.com/"
                   />
                   <ProjectItem
                     imgSrc={CarpentryDesktop}
                     altText="Project Two"
-                    title={isAboveSm ? "Cotter Carpentry" : "Cotter Carpentry"}
-                    description={isAboveSm ? "Web Application" : "Web App"}
+                    title="Cotter Carpentry"
+                    description="Web Application"
+                    techStack="React, TypeScript, Tailwind CSS, AWS S3"
                     link="https://dffj7242m7ucr.cloudfront.net"
                   />
                   <ProjectItem
                     imgSrc={FitnessDesktop}
                     altText="Project Three"
-                    title={
-                      isAboveSm
-                        ? "Ohio Fitness & Martial Arts"
-                        : "Ohio Fitness Gym"
-                    }
-                    description={isAboveSm ? "Web Application" : "Web App"}
+                    title="Ohio Fitness & Martial Arts"
+                    description="Web Application"
+                    techStack="React, TypeScript, Tailwind CSS, Firebase"
                     link="https://d2knfuznay8em1.cloudfront.net"
                   />
                   <ProjectItem
                     imgSrc={TierDesktop}
                     altText="Project Four"
-                    title={isAboveSm ? "Tier List Quiz" : "Tier List Quiz"}
-                    description={isAboveSm ? "Web Application" : "Web App"}
+                    title="Tier List Quiz"
+                    description="Web Application"
+                    techStack="React, TypeScript, Tailwind CSS, Node.js"
                     link="https://dwxi6v27vyx5l.cloudfront.net"
                   />
                 </div>

@@ -1,8 +1,10 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import React, { useContext } from "react";
 // import AboutOne from "@/assets/about-one.jpg";
-import ProfilePic from "@/assets/profile-pic.png";
+// import ProfilePic from "@/assets/profile-pic.png";
 import ProfilePicMd from "@/assets/profile-pic-md.png";
+import LeftSmile from "@/assets/front left smile.jpg";
+// import LeftSmileMobile from "@/assets/front left smile mobile.jpg";
 
 import SigDark from "@/assets/sig-dark.png";
 import Sig from "@/assets/sig.png";
@@ -18,7 +20,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ isOpen, isDisabled, toggleMenu }) => {
   // Updated menuClasses for a right-side sliding menu
-  const menuClasses = `fixed top-0 right-0 h-5/6 landscape-mobile:h-4/5 mt-20 landscape-mobile:mt-16 w-[calc(100%-.5rem)] xs:w-[calc(100%-1rem)] transition-transform duration-500 ${
+  const menuClasses = `fixed top-0 right-0 h-[90%] landscape-mobile:h-4/5 mt-20 landscape-mobile:mt-16 w-[calc(100%-.5rem)] xs:w-[calc(100%-1rem)] transition-transform duration-500 ${
     isOpen ? "translate-x-0 z-20" : "translate-x-[calc(100%)] z-10"
   } bg-opacity-50 flex flex-row-reverse`;
 
@@ -62,22 +64,22 @@ const About: React.FC<AboutProps> = ({ isOpen, isDisabled, toggleMenu }) => {
               <img
                 src={isDarkMode ? SigDark : Sig}
                 alt="signature"
-                className="w-40 landscape-mobile:w-32 mx-auto pt-2 landscape-mobile:pt-0"
+                className="w-40 landscape-mobile:w-32 mx-auto pt-4 landscape-mobile:pt-0"
               />
             </div>
             {/* IMAGE------------------------------------- */}
             <div className="w-full md:w-2/3 h-full flex justify-center items-center overflow-hidden z-10 landscape-mobile:pr-6 pr-6 md:pr-none">
               {isAboveMd ? (
                 <img
-                  src={ProfilePic}
+                  src={LeftSmile}
                   alt="About"
-                  className="max-w-full max-h-full object-cover rounded-md md:mx-auto filter grayscale transition duration-200 ease-in-out hover:filter-none"
+                  className="w-1/2 lg:w-[40%] rounded-md md:mx-auto filter grayscale transition duration-200 ease-in-out "
                 />
               ) : (
                 <img
                   src={ProfilePicMd}
                   alt="About"
-                  className="max-w-full max-h-full object-cover rounded-md md:mx-auto filter grayscale transition duration-200 ease-in-out hover:filter-none"
+                  className="max-w-full max-h-full object-cover rounded-md md:mx-auto filter grayscale transition duration-200 ease-in-out "
                 />
               )}
             </div>
