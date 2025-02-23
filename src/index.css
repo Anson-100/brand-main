@@ -59,7 +59,7 @@ body,
 /* PROJECT ITEM STYLING ============================================================================ */
 .project-tile {
   background: #a8a29e16;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(80px);
   border: 1px solid transparent;
   border-top-color: rgba(255, 255, 255, 0.2);
   border-left-color: rgba(255, 255, 255, 0.2);

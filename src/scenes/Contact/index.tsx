@@ -16,7 +16,7 @@ const Contact: React.FC<ContactProps> = ({
   toggleMenu,
 }) => {
   // Updated menuClasses for a 5/6 height of the viewport
-  const menuClasses = `fixed bottom-0 left-0 right-0 z-20 w-11/12 se-mobile:w-[98%] mx-auto h-[90%] landscape-mobile:h-[82%] transition-transform duration-500 ${
+  const menuClasses = `fixed bottom-0 left-0 right-0 z-20 w-11/12 se-mobile:w-[98%] mx-auto h-[88%] md:h-[90%] landscape-mobile:h-[82%] transition-transform duration-500 ${
     isOpen ? "translate-y-0" : "translate-y-full"
   } bg-opacity-50 flex flex-col items-center`;
 
