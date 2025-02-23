@@ -45,7 +45,7 @@ const Contact: React.FC<ContactProps> = ({
           >
             {isAboveMd ? (
               <div className="my-auto z-10 w-1/3">
-                <h1 className="text-4xl font-bold mb-4 text-text-header dark:text-dark-text-header">
+                <h1 className="text-3xl md:text-4xl font-bold mb-4 text-text-header dark:text-dark-text-header">
                   Let's Talk!
                 </h1>
                 <p className="text-md text-text-content dark:text-dark-text-content">

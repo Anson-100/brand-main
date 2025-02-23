@@ -17,9 +17,11 @@ import CoolEnglishMobile from "@/assets/cool-english-mobile.png";
 import AIHubDesktop from "@/assets/ai-hub-desktop.png";
 import AIHubMobile from "@/assets/ai-hub-mobile.png";
 
-import { SquaresPlusIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ProjectItem from "@/components/ProjectItem";
+import ProjectItem from "@/components/ProjectItem/index";
+import ProjectItemMobile from "@/components/ProjectItem/ProjectItemMobile";
+
+import { SquaresPlusIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 interface ProjectsProps {
   isOpen: boolean;
@@ -37,7 +39,7 @@ const Projects: React.FC<ProjectsProps> = ({
     isOpen ? "translate-x-0 z-20" : "-translate-x-[calc(100%)] z-10" // Assuming 1rem = 4 units, adjust accordingly if your setup differs
   } bg-opacity-50 flex flex-row`;
 
-  const isAboveMd = useMediaQuery("(min-width: 1060px)");
+  // const isAboveMd = useMediaQuery("(min-width: 1060px)");
   const isAboveSm = useMediaQuery("(min-width: 768px)");
   const isLandscapeMobile = useMediaQuery(
     "(max-height: 440px) and (orientation: landscape)",
@@ -53,16 +55,16 @@ const Projects: React.FC<ProjectsProps> = ({
             className="absolute inset-10 sm:inset-20 md:inset-30 lg:inset-80 m-auto text-slide-icon opacity-35 dark:text-dark-slide-icon"
             z-0
           />{" "}
-          {isAboveMd ? (
+          {isAboveSm ? (
             <div
-              className={`relative h-full w-full flex justify-between gap-8 transition-opacity ${isOpen ? "opacity-100" : "opacity-0"}`}
+              className={`relative pr-8 md:mr-0 h-full w-full flex flex-col md:flex-row justify-between  gap-8 transition-opacity ${isOpen ? "opacity-100" : "opacity-0"}`}
               style={{
                 transitionDuration: isOpen ? "1000ms" : "200ms",
               }}
             >
               {/* HEADER----------------------------- */}
-              <div className="w-1/3 mx-auto my-auto z-10 ">
-                <h2 className="text-4xl font-bold mb-4 text-text-header dark:text-dark-text-header">
+              <div className="w-1/2 md:w-1/3 ml-4 md:ml-0 mt-8 md:mx-auto md:my-auto z-10 pb-4 md:pb-0">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text-header dark:text-dark-text-header">
                   Projects
                 </h2>
                 <p className="text-md text-text-content dark:text-dark-text-content">
@@ -71,7 +73,7 @@ const Projects: React.FC<ProjectsProps> = ({
                 </p>
               </div>
               {/* PROJECTS---------------------------------- */}
-              <div className="projects-scrollable w-2/3 z-10 h-full overflow-y-auto p-4 md:p-4 mr-8">
+              <div className="projects-scrollable w-full md:w-2/3 z-10 h-full overflow-y-auto p-4 mr-8">
                 <div className="flex flex-col h-full mx-auto gap-8">
                   {" "}
                   <ProjectItem
@@ -97,14 +99,6 @@ const Projects: React.FC<ProjectsProps> = ({
                     description="Web Application/AI Browser Extension"
                     techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
                     link="https://d3uwbaee6v16v3.cloudfront.net/"
-                  />
-                  <ProjectItem
-                    imgSrc={CarpentryDesktop}
-                    altText="Project Three"
-                    title="Cotter Carpentry"
-                    description="Web Application"
-                    techStack="React, JavaScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
-                    link="https://dffj7242m7ucr.cloudfront.net"
                   />{" "}
                   <ProjectItem
                     imgSrc={AIHubDesktop}
@@ -114,6 +108,14 @@ const Projects: React.FC<ProjectsProps> = ({
                     techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
                     link="https://d1g3hir3bpucsm.cloudfront.net/"
                   />
+                  <ProjectItem
+                    imgSrc={CarpentryDesktop}
+                    altText="Project Three"
+                    title="Cotter Carpentry"
+                    description="Web Application"
+                    techStack="React, JavaScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
+                    link="https://dffj7242m7ucr.cloudfront.net"
+                  />{" "}
                   <ProjectItem
                     imgSrc={TierDesktop}
                     altText="Project Five"
@@ -135,8 +137,8 @@ const Projects: React.FC<ProjectsProps> = ({
               }}
             >
               {/* HEADER MOBILE ----------------------------------------------*/}
-              <div className="w-full lg:w-1/3 mx-auto my-auto z-10 flex-shrink-0 pt-8 landscape-mobile:pt-0 md:pt-0">
-                <h2 className="text-2xl font-bold mb-4 landscape-mobile:mb-0 text-text-header dark:text-dark-text-header">
+              <div className="w-full lg:w-1/3 mx-auto my-auto z-10 flex-shrink-0 pt-4 sm:pt-8 landscape-mobile:pt-0 md:pt-0">
+                <h2 className="text-2xl font-bold sm:mb-4 landscape-mobile:mb-0 text-text-header dark:text-dark-text-header">
                   Projects
                 </h2>
                 <p className="text-md text-text-content dark:text-dark-text-content hidden xs:inline">
@@ -147,7 +149,7 @@ const Projects: React.FC<ProjectsProps> = ({
               {/* PROJECTS MOBILE ---------------------- */}
               <div className="projects-scrollable z-10 h-full overflow-y-auto md:p-4 ">
                 <div className="flex flex-col h-full  mx-auto gap-y-12">
-                  <ProjectItem
+                  <ProjectItemMobile
                     imgSrc={FitnessMobile}
                     altText="Project Four"
                     title="Ohio Fitness & Martial Arts"
@@ -155,7 +157,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     techStack="React, TypeScript, Tailwind CSS, AWS(S3, Cloudfront, Route 53)"
                     link="https://ohiofitnessmartialarts.com/"
                   />
-                  <ProjectItem
+                  <ProjectItemMobile
                     imgSrc={CoolEnglishMobile}
                     altText="Project Four"
                     title="Cool English (Grayscale Version)"
@@ -163,23 +165,15 @@ const Projects: React.FC<ProjectsProps> = ({
                     techStack="React, TypeScript, Tailwind CSS, AWS(S3, Cloudfront, Route 53)"
                     link="https://dky9afmykrd3g.cloudfront.net/"
                   />
-                  <ProjectItem
+                  <ProjectItemMobile
                     imgSrc={ServomancerMobile}
                     altText="Project One"
                     title="Servomancer"
                     description="Web Application/AI Browser Extension"
                     techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
                     link="https://d3uwbaee6v16v3.cloudfront.net/"
-                  />
-                  <ProjectItem
-                    imgSrc={CarpentryMobile}
-                    altText="Project Three"
-                    title="Cotter Carpentry"
-                    description="Web Application"
-                    techStack="React, JavaScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
-                    link="https://dffj7242m7ucr.cloudfront.net"
                   />{" "}
-                  <ProjectItem
+                  <ProjectItemMobile
                     imgSrc={AIHubMobile}
                     altText="Project Two"
                     title="AI Hub"
@@ -187,7 +181,15 @@ const Projects: React.FC<ProjectsProps> = ({
                     techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
                     link="https://d1g3hir3bpucsm.cloudfront.net/"
                   />
-                  <ProjectItem
+                  <ProjectItemMobile
+                    imgSrc={CarpentryMobile}
+                    altText="Project Three"
+                    title="Cotter Carpentry"
+                    description="Web Application"
+                    techStack="React, JavaScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
+                    link="https://dffj7242m7ucr.cloudfront.net"
+                  />{" "}
+                  <ProjectItemMobile
                     imgSrc={TierMobile}
                     altText="Project Five"
                     title="Jiu-Jitsu Tier List Quiz"

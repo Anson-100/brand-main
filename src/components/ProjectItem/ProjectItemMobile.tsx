@@ -1,6 +1,11 @@
 import React from "react";
+import {
+  ChevronLeftIcon,
+  StopIcon,
+  Bars3Icon,
+} from "@heroicons/react/24/outline";
 
-interface ProjectItemProps {
+interface ProjectItemMobileProps {
   imgSrc: string;
   altText: string;
   title: string;
@@ -10,7 +15,7 @@ interface ProjectItemProps {
   isLive?: boolean;
 }
 
-const ProjectItem: React.FC<ProjectItemProps> = ({
+const ProjectItemMobile: React.FC<ProjectItemMobileProps> = ({
   imgSrc,
   altText,
   title,
@@ -21,19 +26,25 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 }) => {
   return (
     <div className="relative project-tile landscape-mobile:rounded-sm rounded-xl p-4 dark:bg-stone-700 backdrop-blur-sm dark:bg-opacity-20">
-      <div className="rounded-b border-zinc-400 border rounded-lg overflow-hidden p-1 bg-zinc-900">
-        <div className="rounded border-zinc-400 border overflow-hidden">
-          {" "}
+      <div className="p-1 border-zinc-400 border rounded-lg relative w-[84%] mx-auto mb-4 bg-zinc-900">
+        {/* PHONE IMAGE================== */}
+        <div className="rounded-b border-zinc-400 border rounded relative">
+          <div className="h-5 w-full bg-zinc-800 rounded-t flex items-center justify-center">
+            <div className="rounded-full h-3 w-3 bg-zinc-950"></div>
+          </div>
+
           <img
             src={imgSrc}
             alt={altText}
-            className="object-cover w-full landscape-mobile:rounded-sm "
+            className="object-cover w-full  landscape-mobile:rounded-sm "
           />
+          <div className="absolute bottom-0 h-8 w-full bg-zinc-200 flex items-center justify-between px-12">
+            <Bars3Icon className="rotate-90 h-5 text-zinc-700" />
+            <StopIcon className="h-5 text-zinc-700" />
+            <ChevronLeftIcon className="h-5 text-zinc-700" />
+          </div>
         </div>
       </div>
-      <div className="w-24 md:w-32 h-6 border-zinc-400 border-x mx-auto bg-zinc-950"></div>
-      <div className="w-1/3 h-2 md:h-3 border-zinc-400 border rounded-sm mx-auto mb-4 bg-zinc-900"></div>
-
       {/* {isLive ? (
         <div className="absolute top-10 right-10 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
           LIVE
@@ -66,4 +77,4 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   );
 };
 
-export default ProjectItem;
+export default ProjectItemMobile;
