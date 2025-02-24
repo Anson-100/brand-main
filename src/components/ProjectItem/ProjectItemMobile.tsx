@@ -27,7 +27,7 @@ const ProjectItemMobile: React.FC<ProjectItemMobileProps> = ({
   return (
     <div className="relative project-tile landscape-mobile:rounded-sm rounded-xl p-4 dark:bg-stone-700 backdrop-blur-sm dark:bg-opacity-20">
       <div className="p-1 border-zinc-400 border rounded-lg relative w-[84%] mx-auto mb-4 bg-zinc-900">
-        {/* PHONE IMAGE================== */}
+        {/* PHONE DESIGN================== */}
         <div className="rounded-b border-zinc-400 border rounded relative">
           <div className="h-5 w-full bg-zinc-800 rounded-t flex items-center justify-center">
             <div className="rounded-full h-3 w-3 bg-zinc-950"></div>
@@ -38,7 +38,7 @@ const ProjectItemMobile: React.FC<ProjectItemMobileProps> = ({
             alt={altText}
             className="object-cover w-full  landscape-mobile:rounded-sm "
           />
-          <div className="absolute bottom-0 h-8 w-full bg-zinc-200 flex items-center justify-between px-12">
+          <div className=" h-8 w-full bg-zinc-200 flex items-center justify-between px-12">
             <Bars3Icon className="rotate-90 h-5 text-zinc-700" />
             <StopIcon className="h-5 text-zinc-700" />
             <ChevronLeftIcon className="h-5 text-zinc-700" />
@@ -68,7 +68,7 @@ const ProjectItemMobile: React.FC<ProjectItemMobileProps> = ({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 px-3 py-2 text-base font-semibold text-gray-200 bg-indigo-600 rounded-lg hover:bg-indigo-500 transition text-center"
+          className="mt-4 px-3 py-2 text-base font-semibold text-gray-200 bg-indigo-600 rounded hover:bg-indigo-500 transition text-center"
         >
           Visit Site <span className="text-lg">↗</span>
         </a>

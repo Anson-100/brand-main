@@ -51,7 +51,7 @@ const About: React.FC<AboutProps> = ({ isOpen, isDisabled, toggleMenu }) => {
             }}
           >
             {/* CONTENT------------------------------------------ */}
-            <div className="my-auto z-10 w-full sm:w-2/3 md:w-1/3 pt-8 landscape-mobile:pt-0 md:pt-0">
+            <div className="my-auto z-10 w-full sm:w-2/3 md:w-1/3 pt-6 landscape-mobile:pt-0 md:pt-0">
               <h2 className="text-2xl md:text-4xl text-text-header dark:text-dark-text-header font-bold mb-4 landscape-mobile:mb-2">
                 About
               </h2>

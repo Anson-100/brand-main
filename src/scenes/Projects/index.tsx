@@ -67,7 +67,7 @@ const Projects: React.FC<ProjectsProps> = ({
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text-header dark:text-dark-text-header">
                   Projects
                 </h2>
-                <p className="text-md text-text-content dark:text-dark-text-content">
+                <p className="text-md text-text-content dark:text-dark-text-content lg:w-4/6">
                   Check out some of the projects I've worked on. Each reflects a
                   dedication to quality, creativity, and practicality.
                 </p>
@@ -89,7 +89,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     altText="Project Four"
                     title="Cool English (Grayscale Version)"
                     description="Web Application"
-                    techStack="React, TypeScript, Tailwind CSS, AWS(S3, Cloudfront, Route 53)"
+                    techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
                     link="https://dky9afmykrd3g.cloudfront.net/"
                   />
                   <ProjectItem
@@ -129,7 +129,7 @@ const Projects: React.FC<ProjectsProps> = ({
             </div>
           ) : (
             <div
-              className={`relative h-full w-full flex flex-col lg:flex-row gap-8 landscape-mobile:gap-3 transition-opacity  ${
+              className={`relative h-full w-full flex flex-col lg:flex-row gap-6 landscape-mobile:gap-3 transition-opacity  ${
                 isOpen ? "opacity-100" : "opacity-0"
               }`}
               style={{
@@ -137,7 +137,7 @@ const Projects: React.FC<ProjectsProps> = ({
               }}
             >
               {/* HEADER MOBILE ----------------------------------------------*/}
-              <div className="w-full lg:w-1/3 mx-auto my-auto z-10 flex-shrink-0 pt-4 sm:pt-8 landscape-mobile:pt-0 md:pt-0">
+              <div className="w-full lg:w-1/3 mx-auto my-auto z-10 flex-shrink-0 pt-6 sm:pt-8 landscape-mobile:pt-0 md:pt-0">
                 <h2 className="text-2xl font-bold sm:mb-4 landscape-mobile:mb-0 text-text-header dark:text-dark-text-header">
                   Projects
                 </h2>
@@ -154,7 +154,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     altText="Project Four"
                     title="Ohio Fitness & Martial Arts"
                     description="Web Application"
-                    techStack="React, TypeScript, Tailwind CSS, AWS(S3, Cloudfront, Route 53)"
+                    techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53, DynamoDB, Lambda, SES, Api Gateway)"
                     link="https://ohiofitnessmartialarts.com/"
                   />
                   <ProjectItemMobile
@@ -162,7 +162,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     altText="Project Four"
                     title="Cool English (Grayscale Version)"
                     description="Web Application"
-                    techStack="React, TypeScript, Tailwind CSS, AWS(S3, Cloudfront, Route 53)"
+                    techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
                     link="https://dky9afmykrd3g.cloudfront.net/"
                   />
                   <ProjectItemMobile
@@ -170,7 +170,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     altText="Project One"
                     title="Servomancer"
                     description="Web Application/AI Browser Extension"
-                    techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
+                    techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda, API Gateway)"
                     link="https://d3uwbaee6v16v3.cloudfront.net/"
                   />{" "}
                   <ProjectItemMobile
@@ -178,7 +178,7 @@ const Projects: React.FC<ProjectsProps> = ({
                     altText="Project Two"
                     title="AI Hub"
                     description="Web Application/AI Browser Extension"
-                    techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
+                    techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda, API Gateway)"
                     link="https://d1g3hir3bpucsm.cloudfront.net/"
                   />
                   <ProjectItemMobile

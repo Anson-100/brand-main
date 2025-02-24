@@ -54,8 +54,8 @@ const Contact: React.FC<ContactProps> = ({
                 </p>
               </div>
             ) : (
-              <div className="my-auto flex flex-col gap-4 sm:gap-8 z-10 xs:w-3/4 landscape-mobile:hidden">
-                <h1 className="text-2xl font-bold text-text-header dark:text-dark-text-header">
+              <div className=" flex flex-col gap-4 sm:gap-8 z-10 xs:w-3/4 landscape-mobile:hidden">
+                <h1 className="text-2xl font-bold text-text-header dark:text-dark-text-header pt-6">
                   Let's Talk!
                 </h1>
                 <p className="text-md text-text-content dark:text-dark-text-content se:hidden">

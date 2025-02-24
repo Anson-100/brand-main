@@ -53,7 +53,7 @@ const ControlPanel: React.FC = () => {
   const { isDarkMode } = useContext(ThemeContext);
 
   const buttonStyling =
-    "group bg-button-bg dark:bg-dark-button-bg rounded-lg border border-button-border dark:border-dark-button-border tab flex items-center justify-center w-40 p-3 bt-bp:py-4 hover:bg-button-bg-hover dark:hover:bg-dark-button-bg-hover text-text-gray dark:text-dark-text-gray hover:text-text-header dark:hover:text-dark-text-header dark:hover:border-dark-button-border-hover landscape-mobile:py-3";
+    "group bg-button-bg dark:bg-dark-button-bg rounded-lg border border-button-border dark:border-dark-button-border tab flex items-center justify-center w-40 p-3 bt-bp:py-4 hover:bg-button-bg-hover dark:hover:bg-dark-button-bg-hover text-gray-300 dark:text-dark-text-gray hover:text-text-header dark:hover:text-dark-text-header dark:hover:border-dark-button-border-hover landscape-mobile:py-3";
   const buttonIconStyling =
     "h-6 text-text-gray dark:text-dark-text-gray group-hover:text-text-content dark:group-hover:text-dark-text-content";
   // ------------------------------------------------------------------------------------------------------
