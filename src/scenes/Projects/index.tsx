@@ -11,8 +11,8 @@ import FitnessMobile from "@/assets/fitness-mobile.png";
 import CarpentryDesktop from "@/assets/carpentry-desktop.png";
 import CarpentryMobile from "@/assets/carpentry-mobile.png";
 
-import CoolEnglishDesktop from "@/assets/cool-english-desktop.png";
-import CoolEnglishMobile from "@/assets/cool-english-mobile.png";
+// import CoolEnglishDesktop from "@/assets/cool-english-desktop.png";
+// import CoolEnglishMobile from "@/assets/cool-english-mobile.png";
 
 import AIHubDesktop from "@/assets/ai-hub-desktop.png";
 import AIHubMobile from "@/assets/ai-hub-mobile.png";
@@ -77,21 +77,29 @@ const Projects: React.FC<ProjectsProps> = ({
                 <div className="flex flex-col h-full mx-auto gap-8">
                   {" "}
                   <ProjectItem
+                    imgSrc={AIHubDesktop}
+                    altText="Project Four"
+                    title="Paradise Food Tours"
+                    description="Web Application"
+                    techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53, DynamoDB, Lambda, SES, API Gateway, Cognito)"
+                    link="https://paradisefoodtours.com/"
+                  />
+                  <ProjectItem
                     imgSrc={FitnessDesktop}
                     altText="Project Four"
                     title="Ohio Fitness & Martial Arts"
                     description="Web Application"
-                    techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53, DynamoDB, Lambda, SES, Api Gateway)"
+                    techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53, DynamoDB, Lambda, SES, API Gateway, Cognito)"
                     link="https://ohiofitnessmartialarts.com/"
                   />
-                  <ProjectItem
+                  {/* <ProjectItem
                     imgSrc={CoolEnglishDesktop}
                     altText="Project Four"
                     title="Cool English (Grayscale Version)"
                     description="Web Application"
                     techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
                     link="https://dky9afmykrd3g.cloudfront.net/"
-                  />
+                  /> */}
                   <ProjectItem
                     imgSrc={ServomancerDesktop}
                     altText="Project One"
@@ -100,14 +108,14 @@ const Projects: React.FC<ProjectsProps> = ({
                     techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
                     link="https://d3uwbaee6v16v3.cloudfront.net/"
                   />{" "}
-                  <ProjectItem
+                  {/* <ProjectItem
                     imgSrc={AIHubDesktop}
                     altText="Project Two"
                     title="AI Hub"
                     description="Web Application/AI Browser Extension"
                     techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda)"
                     link="https://d1g3hir3bpucsm.cloudfront.net/"
-                  />
+                  /> */}
                   <ProjectItem
                     imgSrc={CarpentryDesktop}
                     altText="Project Three"
@@ -150,6 +158,14 @@ const Projects: React.FC<ProjectsProps> = ({
               <div className="projects-scrollable z-10 h-full overflow-y-auto md:p-4 ">
                 <div className="flex flex-col h-full  mx-auto gap-y-12">
                   <ProjectItemMobile
+                    imgSrc={AIHubMobile}
+                    altText="Project Four"
+                    title="Paradise Food Tours"
+                    description="Web Application"
+                    techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53, DynamoDB, Lambda, SES, API Gateway, Cognito)"
+                    link="https://paradisefoodtours.com/"
+                  />
+                  <ProjectItemMobile
                     imgSrc={FitnessMobile}
                     altText="Project Four"
                     title="Ohio Fitness & Martial Arts"
@@ -157,30 +173,22 @@ const Projects: React.FC<ProjectsProps> = ({
                     techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53, DynamoDB, Lambda, SES, Api Gateway)"
                     link="https://ohiofitnessmartialarts.com/"
                   />
-                  <ProjectItemMobile
+                  {/* <ProjectItemMobile
                     imgSrc={CoolEnglishMobile}
                     altText="Project Four"
                     title="Cool English (Grayscale Version)"
                     description="Web Application"
                     techStack="React, TypeScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
                     link="https://dky9afmykrd3g.cloudfront.net/"
-                  />
-                  <ProjectItemMobile
-                    imgSrc={ServomancerMobile}
-                    altText="Project One"
-                    title="Servomancer"
-                    description="Web Application/AI Browser Extension"
-                    techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda, API Gateway)"
-                    link="https://d3uwbaee6v16v3.cloudfront.net/"
-                  />{" "}
-                  <ProjectItemMobile
+                  /> */}
+                  {/* <ProjectItemMobile
                     imgSrc={AIHubMobile}
                     altText="Project Two"
                     title="AI Hub"
                     description="Web Application/AI Browser Extension"
                     techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda, API Gateway)"
                     link="https://d1g3hir3bpucsm.cloudfront.net/"
-                  />
+                  /> */}
                   <ProjectItemMobile
                     imgSrc={CarpentryMobile}
                     altText="Project Three"
@@ -188,6 +196,14 @@ const Projects: React.FC<ProjectsProps> = ({
                     description="Web Application"
                     techStack="React, JavaScript, Tailwind CSS, AWS (S3, Cloudfront, Route 53)"
                     link="https://dffj7242m7ucr.cloudfront.net"
+                  />{" "}
+                  <ProjectItemMobile
+                    imgSrc={ServomancerMobile}
+                    altText="Project One"
+                    title="Servomancer"
+                    description="Web Application/AI Browser Extension"
+                    techStack="React, TypeScript, Tailwind CSS, Python, AWS (S3, Cloudfront, Route 53, Lambda, API Gateway)"
+                    link="https://d3uwbaee6v16v3.cloudfront.net/"
                   />{" "}
                   <ProjectItemMobile
                     imgSrc={TierMobile}
@@ -218,7 +234,7 @@ const Projects: React.FC<ProjectsProps> = ({
                 transform: "translateY(-50%)",
               }}
             >
-              {/* CONTENT DIV--------------------------------------------------------------------------------- */}
+              {/* CLOSE DIV--------------------------------------------------------------------------------- */}
               <div className="transform -rotate-90 origin-center text-md md:text-md whitespace-nowrap flex gap-2 items-center text-text-gray dark:text-dark-text-gray group-hover:text-text-header dark:group-hover:text-dark-text-header">
                 <XMarkIcon className="h-5 text-indigo-800 dark:text-dark-indigo-800 group-hover:text-indigo-600 dark:group-hover:text-dark-indigo-600" />
                 close
